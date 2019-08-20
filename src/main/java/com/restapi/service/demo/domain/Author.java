@@ -27,7 +27,7 @@ public class Author implements Serializable {
         this.books = books;
     }
 
-
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -36,6 +36,7 @@ public class Author implements Serializable {
         this.id = id;
     }
 
+    @Column(name = "name", nullable = false)
     public String getName() {
         return name;
     }
@@ -44,6 +45,7 @@ public class Author implements Serializable {
         this.name = name;
     }
 
+    @Column(name = "genre", nullable = false)
     public String getGenre() {
         return genre;
     }
@@ -52,11 +54,17 @@ public class Author implements Serializable {
         this.genre = genre;
     }
 
+    @Column(name = "country", nullable = false)
     public String getCountry() {
         return country;
     }
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "Author [id=" + id +", name=" + name + ", genre=" + genre + ", country=" + country +"]";
     }
 }
