@@ -56,6 +56,7 @@ public class AuthorController {
     })
     @PostMapping("/authors")
     @RequestMapping(method = RequestMethod.POST, value = "/authors")
+
     public void addAuthor(@RequestBody Author author) {
         authorsService.addAuthor(author);
     }
